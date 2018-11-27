@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">mebus</string>
+    <string name="action_settings">Settings</string>
+    <string name="title1">مسیر ویژه</string>
+    <string name="title2">سرویس ها</string>
+    <string name="title3">دربستی</string>
+    <string name="title4">رانندگان و وسایل نقلیه</string>
+    <string name="title5">محیط کاربری</string>
+    <string name="title6">مسیرها</string>
+    <string name="title7">تورها</string>
+    <string name="title8">پذیرایی</string>
+</resources>
