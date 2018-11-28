@@ -18,6 +18,17 @@
                                 <PersistentState>
                                   <option name="children">
                                     <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="1" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="foregroundImage">
                                         <value>
                                           <PersistentState>
@@ -33,9 +44,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="119977" />
-                                      <entry key="foregroundImage" value="C:\Users\Master\Documents\Repos\mebus2\_assets\WhatIMade\MainIcon.png" />
+                                      <entry key="backgroundImage" value="C:\Users\Master\Documents\Repos\mebus2\_assets\WhatIMade\Untitled.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Master\Documents\Repos\mebus2\_assets\WhatIMade\icon\mebus_logo_u-pdf (1).png" />
+                                      <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="webIconShape" value="NONE" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -66,7 +79,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/maps/ic_directions_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_info_outline_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -76,12 +89,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="2a7bb7" />
-                            <entry key="height" value="84" />
-                            <entry key="outputName" value="ic_directions_black_24dp" />
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_info_outline_black_24dp" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Master" />
-                            <entry key="width" value="84" />
+                            <entry key="sourceFile" value="C:\Users\Master\Downloads\user.svg" />
                           </map>
                         </option>
                       </PersistentState>
