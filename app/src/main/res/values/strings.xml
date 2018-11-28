@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">می باس</string>
     <string name="action_settings">Settings</string>
+    <string name="title0">پاسخ به سوالات</string>
     <string name="title1">مسیر ویژه</string>
     <string name="title2">سرویس ها</string>
     <string name="title3">دربستی</string>

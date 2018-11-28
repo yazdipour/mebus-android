@@ -7,5 +7,5 @@
     <color name="colorPrimaryDark">#FD820A</color>
     <color name="colorAccent">#2A7BB7</color>
     <color name="backgroundColor">#FAFAFA</color>
-    <color name="cardBackgroundColor">#ffffff</color>
+    <color name="white">#ffffff</color>
 </resources>

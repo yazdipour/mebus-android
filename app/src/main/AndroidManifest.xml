@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ServicesActivity" />
+        <activity android:name=".WaysActivity" />
+        <activity android:name=".WaysSpecialActivity" />
+        <activity android:name=".DriversActivity" />
+        <activity android:name=".ToursActivity"></activity>
     </application>
 
 </manifest>
