@@ -11,9 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -22,12 +21,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ServicesActivity" />
-        <activity android:name=".WaysActivity" />
-        <activity android:name=".WaysSpecialActivity" />
-        <activity android:name=".DriversActivity" />
-        <activity android:name=".ToursActivity"></activity>
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ServicesActivity"
+            android:label="@string/label_service"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.DriversActivity"
+            android:label="@string/title4"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.MessagesActivity"
+            android:label="@string/label_messages"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity android:name=".Activities.RequestActivity"
+            android:label="@string/title3"/>
     </application>
 
 </manifest>

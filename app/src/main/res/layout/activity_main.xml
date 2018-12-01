@@ -6,36 +6,37 @@
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:textDirection="rtl"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/infobtn"
+            android:id="@+id/info_btn"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="end"
             android:contentDescription="@string/app_name"
             android:elevation="8dp"
             android:padding="8dp"
-            android:src="@drawable/ic_info_outline_black_24dp" />
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:visibility="gone" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="12dp"
             android:contentDescription="@string/app_name"
             android:elevation="8dp"
             android:src="@drawable/typo_white" />
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="108dp"
+            android:layout_marginTop="84dp"
             android:contentDescription="@string/app_name"
             android:elevation="8dp"
             android:src="@drawable/main_icon_bg" />
@@ -47,7 +48,8 @@
 
             <com.github.florent37.shapeofview.shapes.ArcView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="8dp"
                 android:elevation="4dp"
                 app:shape_arc_height="30dp"
                 app:shape_arc_position="bottom">
@@ -56,6 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="#a0FD820A"
+                    android:maxHeight="80dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/fourbus"
                     tools:ignore="ContentDescription" />
@@ -67,9 +70,38 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:columnCount="3"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:stretchMode="none">
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:id="@+id/ad_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    app:shape_roundRect_borderColor="@android:color/black"
+                    app:shape_roundRect_bottomLeftRadius="4dp"
+                    app:shape_roundRect_bottomRightRadius="4dp"
+                    app:shape_roundRect_topLeftRadius="4dp"
+                    app:shape_roundRect_topRightRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="92dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/demo_ad"
+                        tools:ignore="ContentDescription" />
+
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -84,7 +116,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/way_special_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -100,7 +134,9 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/service_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -115,7 +151,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lift_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -131,7 +169,9 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ways_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -146,7 +186,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView style="@style/MainCards">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tours_btn"
+                    style="@style/MainCards">
 
                     <LinearLayout style="@style/MainLinearLayout">
 
@@ -164,6 +206,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/waiter_btn"
                     style="@style/MainCards"
                     android:layout_rowSpan="2">
 
@@ -182,6 +225,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/driver_btn"
                     style="@style/MainCards"
                     android:layout_columnSpan="2"
                     android:layout_gravity="fill_horizontal">
@@ -208,9 +252,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/telegram_btn"
                     style="@style/MainCards"
-                    android:layout_gravity="fill_horizontal"
                     android:layout_columnSpan="2"
+                    android:layout_gravity="fill_horizontal"
                     android:layout_marginTop="2dp"
                     app:cardBackgroundColor="#2980b9">
 
@@ -230,9 +275,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="8dp"
-                            android:textColor="@color/backgroundColor"
                             android:text="@string/title0"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:textColor="@color/backgroundColor" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </GridLayout>

@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimary">#7ABBDE</color>-->
-    <!--<color name="colorPrimaryDark">#2a7bb7</color>-->
-    <!--<color name="colorAccent">#FD820A</color>-->
     <color name="colorPrimary">#ffc107</color>
     <color name="colorPrimaryDark">#FD820A</color>
     <color name="colorAccent">#2A7BB7</color>
     <color name="backgroundColor">#FAFAFA</color>
     <color name="white">#ffffff</color>
+    <color name="semiblack">#222222</color>
+
+    <color name="Sunflower">#FFC312</color>
+    <color name="Energos">#C4E538</color>
+    <color name="BlueMartina">#12CBC4</color>
+    <color name="LavenderRose">#FDA7DF</color>
+    <color name="BaraRed">#ED4C67</color>
+    <color name="RadiantYellow">#F79F1F</color>
+    <color name="AndroidGreen">#A3CB38</color>
+    <color name="MediterraneanSea">#1289A7</color>
+    <color name="LavenderTea">#D980FA</color>
+    <color name="VeryBerry">#B53471</color>
+    <color name="PuffinsBill">#EE5A24</color>
+    <color name="PixelatedGrass">#009432</color>
+    <color name="MerchantMarineBlue">#0652DD</color>
+    <color name="ForgottenPurple">#9980FA</color>
+    <color name="Hollyhock">#833471</color>
+    <color name="RedPigment">#EA2027</color>
+    <color name="TurkishAqua">#006266</color>
+    <color name="LeaguesUndertheSea">#1B1464</color>
+    <color name="CircumorbitalRing">#5758BB</color>
+    <color name="MagentaPurple">#6F1E51</color>
 </resources>

@@ -10,4 +10,12 @@
     <string name="title6">مسیرها</string>
     <string name="title7">تورها</string>
     <string name="title8">پذیرایی</string>
+    <string name="tv_date">۱۳ / مرداد / ۱۳۹۷</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_logout">خروج از حساب</string>
+    <string name="label_messages">پیفام ها</string>
+    <string name="label_service">سرویس ها و مسیرها</string>
+    <string name="demo_driver_name">محمد مهدی فلانی</string>
 </resources>
