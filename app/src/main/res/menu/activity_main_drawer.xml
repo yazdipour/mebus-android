@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/profile_btn"
+            android:icon="@drawable/ic_user"
+            android:title="@string/title5" />
+        <item
+            android:id="@+id/way_special_btn"
+            android:icon="@drawable/ic_way"
+            android:title="@string/title1" />
+        <item
+            android:id="@+id/service_btn"
+            android:icon="@drawable/ic_024_bus_7"
+            android:title="@string/title2" />
+        <item
+            android:id="@+id/lift_btn"
+            android:icon="@drawable/ic_002_bus"
+            android:title="@string/title3" />
+        <item
+            android:id="@+id/ways_btn"
+            android:icon="@drawable/ic_direction"
+            android:title="@string/title6" />
+        <item
+            android:id="@+id/tours_btn"
+            android:icon="@drawable/ic_tourist"
+            android:title="@string/title7" />
+        <item
+            android:id="@+id/waiter_btn"
+            android:icon="@drawable/ic_waiter"
+            android:title="@string/title8" />
+
+        <item
+            android:id="@+id/driver_btn"
+            android:icon="@drawable/ic_taxi_driver_1"
+            android:title="@string/title4" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="معرفی به دوستان" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_smartphone"
+            android:title="گزارش مشکل در برنامه" />
+    </group>
+
+</menu>

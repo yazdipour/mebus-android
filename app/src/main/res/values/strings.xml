@@ -15,7 +15,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_logout">خروج از حساب</string>
-    <string name="label_messages">پیغام ها</string>
+    <string name="label_messages">پیام ها</string>
     <string name="label_service">سرویس ها و مسیرها</string>
     <string name="demo_driver_name">محمد مهدی فلانی</string>
+    <string name="delete">حذف</string>
 </resources>

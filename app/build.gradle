@@ -34,6 +34,5 @@ dependencies {
 //    implementation 'com.stone.vega.library:VegaLayoutManager:1.0.6'
     implementation 'me.anwarshahriar:calligrapher:1.0'
     implementation 'com.crowdfire.cfalertdialog:cfalertdialog:1.1.0'
-    implementation 'com.nightonke:boommenu:2.1.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.rom4ek:arcnavigationview:1.0.3'
 }

@@ -14,10 +14,10 @@ import ir.startup.mebus.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DarbastFragment extends Fragment {
+public class PaziraeFragment extends Fragment {
 
 
-    public DarbastFragment() {
+    public PaziraeFragment() {
         // Required empty public constructor
     }
 
@@ -26,7 +26,7 @@ public class DarbastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_darbast, container, false);
+        return inflater.inflate(R.layout.fragment_pazirae, container, false);
     }
 
 }

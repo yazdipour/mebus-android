@@ -1,7 +1,5 @@
 package ir.startup.mebus;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import androidx.fragment.app.Fragment;
@@ -9,13 +7,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabPagerAdapter extends FragmentPagerAdapter {
-    private List<Fragment> mFragmentList = new ArrayList<>();
-    private List<String> mFragmentTitleList = new ArrayList<>();
+    private List<Fragment> mFragmentList;
+    private List<String> mFragmentTitleList;
 
-    public TabPagerAdapter(FragmentManager fm, Fragment[] mFragments, String[] mTitles) {
+    public TabPagerAdapter(FragmentManager fm, List<Fragment> mFragments, List<String> mTitles) {
         super(fm);
-        Collections.addAll(mFragmentList, mFragments);
-        Collections.addAll(mFragmentTitleList, mTitles);
+        mFragmentList = mFragments;
+        mFragmentTitleList = mTitles;
     }
 
     @Override

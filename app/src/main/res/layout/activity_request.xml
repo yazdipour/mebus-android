@@ -19,14 +19,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:scaleType="center"
-                app:srcCompat="@drawable/demo_map_w"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/demo_map"
                 tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="12dp"
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -68,9 +68,11 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="12dp"
                 android:backgroundTint="@color/PixelatedGrass"
                 android:text="درخواست"
                 android:textSize="18sp" />
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </ScrollView>

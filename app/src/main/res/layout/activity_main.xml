@@ -1,286 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
+    android:orientation="vertical"
     android:textDirection="rtl"
     tools:context=".Activities.MainActivity">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/info_btn"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="end"
-            android:contentDescription="@string/app_name"
-            android:elevation="8dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_info_outline_black_24dp"
-            android:visibility="gone" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="12dp"
-            android:contentDescription="@string/app_name"
-            android:elevation="8dp"
-            android:src="@drawable/typo_white" />
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="84dp"
-            android:contentDescription="@string/app_name"
-            android:elevation="8dp"
-            android:src="@drawable/main_icon_bg" />
-
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <com.github.florent37.shapeofview.shapes.ArcView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginBottom="8dp"
-                android:elevation="4dp"
-                app:shape_arc_height="30dp"
-                app:shape_arc_position="bottom">
+            <ImageButton
+                android:id="@+id/menu_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:elevation="10dp"
+                android:src="@drawable/ic_menu_black_24dp"
+                tools:ignore="ContentDescription" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:foreground="#a0FD820A"
-                    android:maxHeight="80dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/fourbus"
-                    tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/info_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/app_name"
+                android:elevation="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_info_outline_black_24dp"
+                android:visibility="gone" />
 
-            </com.github.florent37.shapeofview.shapes.ArcView>
-
-            <GridLayout
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:columnCount="3"
-                android:orientation="horizontal"
-                android:stretchMode="none">
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:elevation="8dp"
+                android:src="@drawable/typo_white" />
 
-                <com.github.florent37.shapeofview.shapes.RoundRectView
-                    android:id="@+id/ad_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_columnSpan="3"
-                    android:layout_gravity="center"
-                    android:clickable="true"
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="84dp"
+                android:contentDescription="@string/app_name"
+                android:elevation="8dp"
+                android:src="@drawable/main_icon_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.florent37.shapeofview.shapes.ArcView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="8dp"
                     android:elevation="4dp"
-                    android:focusable="true"
-                    app:shape_roundRect_borderColor="@android:color/black"
-                    app:shape_roundRect_bottomLeftRadius="4dp"
-                    app:shape_roundRect_bottomRightRadius="4dp"
-                    app:shape_roundRect_topLeftRadius="4dp"
-                    app:shape_roundRect_topRightRadius="4dp">
+                    app:shape_arc_height="30dp"
+                    app:shape_arc_position="bottom">
 
                     <ImageView
-                        android:layout_width="320dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:maxHeight="92dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="#a0FD820A"
+                        android:maxHeight="80dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/demo_ad"
+                        android:src="@drawable/fourbus"
                         tools:ignore="ContentDescription" />
 
-                </com.github.florent37.shapeofview.shapes.RoundRectView>
+                </com.github.florent37.shapeofview.shapes.ArcView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/profile_btn"
-                    style="@style/MainCards">
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    android:stretchMode="none">
 
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_user"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title5" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/way_special_btn"
-                    style="@style/MainCards">
-
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_way"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title1" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/service_btn"
-                    style="@style/MainCards">
-
-                    <LinearLayout style="@style/MainLinearLayout">
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:id="@+id/ad_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnSpan="3"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:focusable="true"
+                        app:shape_roundRect_borderColor="@android:color/black"
+                        app:shape_roundRect_bottomLeftRadius="4dp"
+                        app:shape_roundRect_bottomRightRadius="4dp"
+                        app:shape_roundRect_topLeftRadius="4dp"
+                        app:shape_roundRect_topRightRadius="4dp">
 
                         <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_015_bus_school_1"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title2" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/lift_btn"
-                    style="@style/MainCards">
-
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_002_bus"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title3" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ways_btn"
-                    style="@style/MainCards">
-
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_direction"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title6" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tours_btn"
-                    style="@style/MainCards">
-
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_suitcase"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title7"
-                            android:textAlignment="center" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/waiter_btn"
-                    style="@style/MainCards"
-                    android:layout_rowSpan="2">
-
-                    <LinearLayout style="@style/MainLinearLayout">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:src="@drawable/ic_waiter"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            style="@style/MainLabel"
-                            android:text="@string/title8"
-                            android:textAlignment="center" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/driver_btn"
-                    style="@style/MainCards"
-                    android:layout_columnSpan="2"
-                    android:layout_gravity="fill_horizontal">
-
-                    <LinearLayout
-                        style="@style/MainLinearLayout"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            style="@style/MainIcon"
-                            android:layout_height="48dp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/ic_taxi_driver_1"
-                            tools:ignore="ContentDescription" />
-
-                        <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="320dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/title4"
-                            android:textAlignment="center" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/telegram_btn"
-                    style="@style/MainCards"
-                    android:layout_columnSpan="2"
-                    android:layout_gravity="fill_horizontal"
-                    android:layout_marginTop="2dp"
-                    app:cardBackgroundColor="#2980b9">
-
-                    <LinearLayout
-                        style="@style/MainLinearLayout"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="42dp"
-                            android:layout_height="42dp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/telegram"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="92dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/demo_ad"
                             tools:ignore="ContentDescription" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/title0"
-                            android:textAlignment="center"
-                            android:textColor="@color/backgroundColor" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </GridLayout>
-        </LinearLayout>
-    </FrameLayout>
-</ScrollView>
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profile_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_user"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title5" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/way_special_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_way"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title1" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/service_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_015_bus_school_1"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title2" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lift_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_002_bus"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title3" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ways_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_direction"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title6" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tours_btn"
+                        style="@style/MainCards">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_suitcase"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title7"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/waiter_btn"
+                        style="@style/MainCards"
+                        android:layout_rowSpan="2">
+
+                        <LinearLayout style="@style/MainLinearLayout">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:src="@drawable/ic_waiter"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/MainLabel"
+                                android:text="@string/title8"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/driver_btn"
+                        style="@style/MainCards"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="fill_horizontal">
+
+                        <LinearLayout
+                            style="@style/MainLinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                style="@style/MainIcon"
+                                android:layout_height="48dp"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/ic_taxi_driver_1"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/title4"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/telegram_btn"
+                        style="@style/MainCards"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_marginTop="2dp"
+                        app:cardBackgroundColor="#2980b9">
+
+                        <LinearLayout
+                            style="@style/MainLinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/telegram"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/title0"
+                                android:textAlignment="center"
+                                android:textColor="@color/backgroundColor" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:itemBackground="@android:color/white"
+        app:menu="@menu/activity_main_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

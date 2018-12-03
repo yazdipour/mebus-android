@@ -23,6 +23,7 @@
         </activity>
         <activity
             android:name=".Activities.ProfileActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.ServicesActivity"
@@ -36,8 +37,10 @@
             android:name=".Activities.MessagesActivity"
             android:label="@string/label_messages"
             android:parentActivityName=".Activities.MainActivity" />
-        <activity android:name=".Activities.RequestActivity"
-            android:label="@string/title3"/>
+        <activity
+            android:name=".Activities.RequestActivity"
+            android:label="@string/title3"
+            android:parentActivityName=".Activities.MainActivity" />
     </application>
 
 </manifest>

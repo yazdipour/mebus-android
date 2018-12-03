@@ -1,21 +1,28 @@
 package ir.startup.mebus.Activities;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.crowdfire.cfalertdialog.CFAlertDialog;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
+import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import ir.startup.mebus.R;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
         TapTargetView.showFor(this,
                 TapTarget.forView(findViewById(R.id.service_btn), "سرویس", "سرویس تست آموزش")
-                        .outerCircleAlpha(0.8f)
+                        .outerCircleAlpha(.9f)
                         .titleTextSize(30)
                         .descriptionTextSize(20)
                         .textColor(R.color.white)
                         .descriptionTextColor(R.color.white)
-                        .outerCircleColor(R.color.semiblack)
+                        .outerCircleColor(R.color.colorPrimaryDark)
                         .drawShadow(true)
                         .cancelable(true)
                         .tintTarget(true)
                         .transparentTarget(true)
+                        .textTypeface(Typeface.createFromAsset(getAssets(), "irsans-Regular.ttf"))
                         .targetRadius(80));
         findViewById(R.id.info_btn).setOnClickListener(this);
         findViewById(R.id.ad_btn).setOnClickListener(this);
@@ -46,16 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.waiter_btn).setOnClickListener(this);
         findViewById(R.id.tours_btn).setOnClickListener(this);
         findViewById(R.id.lift_btn).setOnClickListener(this);
+        findViewById(R.id.menu_btn).setOnClickListener(this);
+        ((NavigationView) findViewById(R.id.nav_view)).setNavigationItemSelectedListener(this);
     }
 
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.info_btn:
-            case R.id.telegram_btn:
-            case R.id.ad_btn:
-                Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
+            case R.id.menu_btn:
+                ((DrawerLayout) findViewById(R.id.drawer_layout)).openDrawer(Gravity.RIGHT);
                 break;
             case R.id.profile_btn:
                 CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
@@ -87,6 +95,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.driver_btn:
                 startActivity(new Intent(MainActivity.this, DriversActivity.class));
                 break;
+            case R.id.info_btn:
+            case R.id.telegram_btn:
+            case R.id.ad_btn:
+            case R.id.nav_share:
+            case R.id.nav_send:
+            default:
+                Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
+                break;
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        View view = new View(this);
+        view.setId(menuItem.getItemId());
+        onClick(view);
+        ((DrawerLayout) findViewById(R.id.drawer_layout)).closeDrawer(GravityCompat.START);
+        return true;
     }
 }

@@ -35,13 +35,24 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="-50dp"
-            android:layout_marginRight="20dp"
             android:src="@drawable/ic_edit_black_24dp"
             app:backgroundTint="#333"
             app:elevation="15dp"
             app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_edit_black_24dp"
+            app:backgroundTint="#333"
+            app:elevation="15dp"
+            app:fabSize="normal" />
+
         <com.github.florent37.shapeofview.shapes.CircleView
             android:layout_width="120dp"
             android:layout_height="120dp"
