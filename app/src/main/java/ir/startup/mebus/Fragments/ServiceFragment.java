@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import ir.startup.mebus.R;
+import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class ServiceFragment extends Fragment {
     @Override
@@ -18,6 +19,7 @@ public class ServiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_service, container, false);
+        new Calligrapher(getContext()).setFont(view, "irsans-Regular.ttf");
 //        BoomMenuButton bmb = view.findViewById(R.id.bmb2);
 //        String[] labels = new String[]{"ویرایش", "حذف"};
 //        String[] subLabel = new String[]{"ویرایش گزینه", "حذف گزینه"};

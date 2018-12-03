@@ -22,27 +22,30 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout mDrawerLayout;
+    private boolean playedTapTarget = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
-        TapTargetView.showFor(this,
-                TapTarget.forView(findViewById(R.id.service_btn), "سرویس", "سرویس تست آموزش")
-                        .outerCircleAlpha(.9f)
-                        .titleTextSize(30)
-                        .descriptionTextSize(20)
-                        .textColor(R.color.white)
-                        .descriptionTextColor(R.color.white)
-                        .outerCircleColor(R.color.colorPrimaryDark)
-                        .drawShadow(true)
-                        .cancelable(true)
-                        .tintTarget(true)
-                        .transparentTarget(true)
-                        .textTypeface(Typeface.createFromAsset(getAssets(), "irsans-Regular.ttf"))
-                        .targetRadius(80));
+        if (!playedTapTarget)
+            TapTargetView.showFor(this,
+                    TapTarget.forView(findViewById(R.id.service_btn),
+                            "سرویس", "سرویس تست آموزش")
+                            .outerCircleAlpha(.9f)
+                            .titleTextSize(30)
+                            .descriptionTextSize(20)
+                            .textColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .outerCircleColor(R.color.colorPrimaryDark)
+                            .drawShadow(true)
+                            .cancelable(true)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .textTypeface(Typeface.createFromAsset(getAssets(), "irsans-Regular.ttf"))
+                            .targetRadius(80));
+        playedTapTarget = true;
         findViewById(R.id.info_btn).setOnClickListener(this);
         findViewById(R.id.ad_btn).setOnClickListener(this);
         findViewById(R.id.profile_btn).setOnClickListener(this);

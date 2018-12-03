@@ -13,11 +13,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="-56dp"
+            android:background="@android:color/transparent"
+            android:elevation="2dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            tools:ignore="ContentDescription" />
+
         <com.github.florent37.shapeofview.shapes.ArcView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginBottom="8dp"
-            android:elevation="4dp"
             app:shape_arc_height="30dp"
             app:shape_arc_position="bottom">
 
@@ -32,26 +43,32 @@
 
         </com.github.florent37.shapeofview.shapes.ArcView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="-50dp"
-            android:src="@drawable/ic_edit_black_24dp"
-            app:backgroundTint="#333"
-            app:elevation="15dp"
-            app:fabSize="normal" />
+            app:elevation="15dp">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-50dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_edit_black_24dp"
-            app:backgroundTint="#333"
-            app:elevation="15dp"
-            app:fabSize="normal" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="-100dp"
+                android:src="@drawable/ic_edit_black_24dp"
+                app:backgroundTint="@color/semiblack"
+                app:fabSize="normal" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/msg_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="100dp"
+                android:src="@drawable/ic_mail_outline_black_24dp"
+                app:backgroundTint="@color/semiblack"
+                app:fabSize="normal" />
+        </FrameLayout>
 
         <com.github.florent37.shapeofview.shapes.CircleView
             android:layout_width="120dp"

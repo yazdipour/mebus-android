@@ -1,7 +1,9 @@
 package ir.startup.mebus.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.crowdfire.cfalertdialog.CFAlertDialog;
@@ -11,6 +13,17 @@ import ir.startup.mebus.R;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class ProfileActivity extends AppCompatActivity {
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +44,8 @@ public class ProfileActivity extends AppCompatActivity {
                     });
             builder.show();
         });
+        findViewById(R.id.msg_fab).setOnClickListener(view -> startActivity(new Intent(ProfileActivity.this, MessagesActivity.class)));
+        findViewById(R.id.edit_fab).setOnClickListener(view -> Toast.makeText(this, "Edit", Toast.LENGTH_SHORT).show());
+        findViewById(R.id.back_btn).setOnClickListener(view -> onBackPressed());
     }
 }
