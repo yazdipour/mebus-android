@@ -14,7 +14,6 @@ import androidx.viewpager.widget.ViewPager;
 import ir.startup.mebus.Fragments.*;
 import ir.startup.mebus.R;
 import ir.startup.mebus.TabPagerAdapter;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class ServicesActivity extends AppCompatActivity {
 
@@ -33,7 +32,6 @@ public class ServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-        new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
         List<String> titles = new ArrayList<>();
         titles.add(getResources().getString(R.string.title1));
         titles.add(getResources().getString(R.string.title2));

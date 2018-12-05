@@ -10,7 +10,6 @@ import com.crowdfire.cfalertdialog.CFAlertDialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import ir.startup.mebus.R;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -29,7 +28,6 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
         findViewById(R.id.logout_btn).setOnClickListener(view -> {
             CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
                     .setTitle("آیا  میخواهید خارج شوید؟")

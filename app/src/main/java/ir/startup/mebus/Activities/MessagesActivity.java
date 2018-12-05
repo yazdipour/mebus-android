@@ -2,7 +2,6 @@ package ir.startup.mebus.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import ir.startup.mebus.R;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,10 +29,7 @@ public class MessagesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
-        new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
-        findViewById(R.id.more_btn).setOnClickListener(view -> {
-            Toast.makeText(this, "REMOVED", Toast.LENGTH_SHORT).show();
-        });
+        findViewById(R.id.more_btn).setOnClickListener(view -> Toast.makeText(this, "REMOVED", Toast.LENGTH_SHORT).show());
         findViewById(R.id.main_card).setOnClickListener(view -> {
             CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
                     .setTitle(((TextView) findViewById(R.id.title)).getText())

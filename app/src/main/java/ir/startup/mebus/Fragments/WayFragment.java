@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import ir.startup.mebus.Activities.RequestActivity;
+import ir.startup.mebus.Helpers.Utils;
 import ir.startup.mebus.R;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class WayFragment extends Fragment {
     @Override
@@ -21,10 +21,10 @@ public class WayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_way, container, false);
-        new Calligrapher(getContext()).setFont(view, "irsans-Regular.ttf");
         view.findViewById(R.id.fab).setOnClickListener(view1 -> {
             startActivity(new Intent(getActivity(), RequestActivity.class));
         });
+        Utils.setUpRecyclerView(view, getContext(), R.layout.item_way);
         return view;
     }
 }

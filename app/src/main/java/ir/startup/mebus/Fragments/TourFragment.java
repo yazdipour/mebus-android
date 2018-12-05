@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ir.startup.mebus.Helpers.Utils;
 import ir.startup.mebus.R;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,7 +28,7 @@ public class TourFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tour, container, false);
-        new Calligrapher(getContext()).setFont(view, "irsans-Regular.ttf");
+        Utils.setUpRecyclerView(view, getContext(), R.layout.item_tour);
         return view;
     }
 

@@ -15,7 +15,6 @@ import ir.startup.mebus.Fragments.CarsFragment;
 import ir.startup.mebus.Fragments.DriversFragment;
 import ir.startup.mebus.R;
 import ir.startup.mebus.TabPagerAdapter;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class DriversActivity extends AppCompatActivity {
 
@@ -34,7 +33,6 @@ public class DriversActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drivers);
-        new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
         List<String> titles = Arrays.asList("رانندگان", "وسایل نقلیه");
         List<Fragment> fragments = Arrays.asList(new DriversFragment(), new CarsFragment());
         TabLayout tabLayout = findViewById(R.id.tabs);

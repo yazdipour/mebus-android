@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shape_dot_radius="3dp"
+        app:shape_dot_spacing="2dp"
+        app:shape_dottedEdgesCutCorner_topLeftSize="8dp"
+        app:shape_dottedEdgesCutCorner_topRightSize="8dp"
+        app:shape_edge_position="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/demo_map" />
+    </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            style="@style/TitleTextView"
+            android:text="مقصد:  میدان آزادی" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="وسیله نقلیه:  مینی بوس هیوندای" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ظرفیت:  10 نفر" />
+    </LinearLayout>
+
+    <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shape_dot_radius="3dp"
+        app:shape_dot_spacing="2dp"
+        app:shape_dottedEdgesCutCorner_bottomLeftSize="8dp"
+        app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
+        app:shape_edge_position="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/AndroidGreen"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TitleTextView"
+                android:layout_gravity="center"
+                android:text="20000"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                style="@style/TitleTextView"
+                android:layout_gravity="center"
+                android:text=" تومان"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+</LinearLayout>

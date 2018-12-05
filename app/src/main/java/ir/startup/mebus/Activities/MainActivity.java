@@ -13,12 +13,14 @@ import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import ir.startup.mebus.R;
-import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new Calligrapher(this).setFont(this, "irsans-Regular.ttf", true);
         if (!playedTapTarget)
             TapTargetView.showFor(this,
                     TapTarget.forView(findViewById(R.id.service_btn),
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .cancelable(true)
                             .tintTarget(true)
                             .transparentTarget(true)
-                            .textTypeface(Typeface.createFromAsset(getAssets(), "irsans-Regular.ttf"))
+                            .textTypeface(Objects.requireNonNull(ResourcesCompat.getFont(this, R.font.irsans)))
                             .targetRadius(80));
         playedTapTarget = true;
         findViewById(R.id.info_btn).setOnClickListener(this);
