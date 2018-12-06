@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import ir.startup.mebus.Fragments.*;
 import ir.startup.mebus.R;
-import ir.startup.mebus.TabPagerAdapter;
+import ir.startup.mebus.Adapter.TabPagerAdapter;
 
 public class ServicesActivity extends AppCompatActivity {
 

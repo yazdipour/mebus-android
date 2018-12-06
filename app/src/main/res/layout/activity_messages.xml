@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fafafa"
     android:orientation="vertical"
     android:padding="8dp"
     tools:context=".Activities.MessagesActivity">
+
     <include
+        layout="@layout/item_messages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/item_messages"/>
+        android:layout_margin="8dp" />
 </LinearLayout>

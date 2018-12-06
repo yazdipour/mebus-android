@@ -10,12 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RvAdapter extends RecyclerView.Adapter<RvViewHolder> {
+    public interface Events {
+        void onClick();
+    }
+
     private final List<Object> data;
     private final int xmlLayout;
+    private Events events;
 
-    public RvAdapter(List<Object> data, int xmlLayout) {
+    public RvAdapter(List<Object> data, int xmlLayout, Events events) {
         this.data = data;
         this.xmlLayout = xmlLayout;
+        this.events = events;
     }
 
     @NonNull
@@ -27,7 +33,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RvViewHolder holder, int position) {
-
+        holder.bind(data.get(position), events, position);
     }
 
     @Override

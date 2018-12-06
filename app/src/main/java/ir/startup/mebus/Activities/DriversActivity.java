@@ -14,7 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import ir.startup.mebus.Fragments.CarsFragment;
 import ir.startup.mebus.Fragments.DriversFragment;
 import ir.startup.mebus.R;
-import ir.startup.mebus.TabPagerAdapter;
+import ir.startup.mebus.Adapter.TabPagerAdapter;
 
 public class DriversActivity extends AppCompatActivity {
 

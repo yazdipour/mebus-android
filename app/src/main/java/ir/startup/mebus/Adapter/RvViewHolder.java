@@ -7,7 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RvViewHolder extends RecyclerView.ViewHolder {
 
-    public RvViewHolder(@NonNull View itemView) {
+    RvViewHolder(@NonNull View itemView) {
         super(itemView);
+    }
+
+    void bind(Object o, RvAdapter.Events events, int position) {
+        itemView.setOnClickListener(view -> events.onClick());
     }
 }

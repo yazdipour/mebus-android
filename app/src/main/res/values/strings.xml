@@ -20,4 +20,12 @@
     <string name="demo_driver_name">محمد مهدی فلانی</string>
     <string name="delete">حذف</string>
     <string name="demo_phone_no">0912123123</string>
+    <string name="demo_food">ساندویج مرغ و سالاد</string>
+    <string name="demo_food2">نوع: گرم</string>
+    <string name="demo_bus">مینی بوس هیوندای</string>
+    <string name="demo_bus2">سفید رنگ</string>
+    <string name="demo_way">مقصد: میدان آزادی</string>
+    <string name="demo_way2">وسیله نقلیه: مینی بوس هیوندای</string>
+    <string name="demo_tour">تور صحرای مصر</string>
+    <string name="demo_tour2">تور 20 روزه صحرا به همراه شام و سافاری</string>
 </resources>

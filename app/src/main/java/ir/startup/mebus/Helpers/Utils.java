@@ -16,9 +16,9 @@ public class Utils {
             new Object(),new Object(),new Object(),new Object(),new Object(),
             new Object(),new Object(),new Object(),new Object(),new Object(),new Object());
 
-    public static void setUpRecyclerView(View mainView, Context context, int layout) {
+    public static void setUpRecyclerView(View mainView, Context context, int layout, RvAdapter.Events events) {
         final RecyclerView recyclerView = mainView.findViewById(R.id.rv);
-        RecyclerView.Adapter adapter = new RvAdapter(list, layout);
+        RecyclerView.Adapter adapter = new RvAdapter(list, layout, events);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(adapter);
     }

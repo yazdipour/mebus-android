@@ -25,16 +25,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ساندویج مرغ و سالاد"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                style="@style/TitleTextView"
+                android:text="@string/demo_food"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="نوع: گرم" />
+                android:text="@string/demo_food2" />
 
         </LinearLayout>
     </LinearLayout>

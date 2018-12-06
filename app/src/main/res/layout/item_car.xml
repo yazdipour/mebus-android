@@ -27,12 +27,12 @@
 
             <TextView
                 style="@style/TitleTextView"
-                android:text="مینی بوس هیوندای" />
+                android:text="@string/demo_bus" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="سفید رنگ" />
+                android:text="@string/demo_bus2" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
