@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:rotationY="180"
+    android:background="#e7e7e7"
     tools:context=".Fragments.WayFragment">
 
     <androidx.recyclerview.widget.RecyclerView

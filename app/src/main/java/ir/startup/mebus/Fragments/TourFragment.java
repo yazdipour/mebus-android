@@ -31,16 +31,13 @@ public class TourFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tour, container, false);
         Utils.setUpRecyclerView(view, getContext(), R.layout.item_tour, () -> {
             CFAlertDialog.Builder builder = new CFAlertDialog.Builder(getContext()).setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT);
-//            ImageView img = new ImageView(getContext());
-//            img.setImageDrawable(getContext().getDrawable(R.drawable.demo_tour_i));
             builder.setTextGravity(Gravity.CENTER_HORIZONTAL)
                     .setHeaderView(R.layout.item_tour);
             builder.addButton("دیدن", getResources().getColor(R.color.white), getResources().getColor(R.color.BlueMartina),
-                    CFAlertDialog.CFAlertActionStyle.DEFAULT,
+                    CFAlertDialog.CFAlertActionStyle.POSITIVE,
                     CFAlertDialog.CFAlertActionAlignment.JUSTIFIED,
                     (dialog, which) -> dialog.dismiss());
             builder.addButton("ویرایش", -1, -1,

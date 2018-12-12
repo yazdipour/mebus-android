@@ -32,6 +32,11 @@ public class ServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
+        try {
+            getSupportActionBar().setElevation(0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         List<String> titles = new ArrayList<>();
         titles.add(getResources().getString(R.string.title1));
         titles.add(getResources().getString(R.string.title2));

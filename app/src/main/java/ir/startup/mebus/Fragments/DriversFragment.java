@@ -1,5 +1,6 @@
 package ir.startup.mebus.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import com.crowdfire.cfalertdialog.CFAlertDialog;
 
 import androidx.fragment.app.Fragment;
+import ir.startup.mebus.Activities.AddDriverActivity;
 import ir.startup.mebus.Helpers.Utils;
 import ir.startup.mebus.R;
 
@@ -23,6 +25,7 @@ public class DriversFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_drivers, container, false);
+        view.findViewById(R.id.fab).setOnClickListener(view1 -> startActivity(new Intent(getActivity(), AddDriverActivity.class)));
         Utils.setUpRecyclerView(view, getContext(), R.layout.item_driver, () -> {
             CFAlertDialog.Builder builder = new CFAlertDialog.Builder(getContext()).setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT);
             ImageView img = new ImageView(getContext());

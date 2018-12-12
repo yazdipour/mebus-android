@@ -74,4 +74,16 @@
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="NavigationTab" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@android:color/black</item>
+        <item name="tabTextAppearance">@style/NavigationTabTextAppearance</item>
+        <item name="tabIndicatorColor">#333333</item>
+        <item name="tabMode">scrollable</item>
+    </style>
+
+    <style name="NavigationTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/semiblack</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

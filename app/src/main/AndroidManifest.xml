@@ -17,13 +17,14 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activities.ProfileActivity"
             android:parentActivityName=".Activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
@@ -31,7 +32,7 @@
         <activity
             android:name=".Activities.ServicesActivity"
             android:label="@string/label_service"
-            android:parentActivityName=".Activities.MainActivity" >
+            android:parentActivityName=".Activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
@@ -39,7 +40,7 @@
         <activity
             android:name=".Activities.DriversActivity"
             android:label="@string/title4"
-            android:parentActivityName=".Activities.MainActivity" >
+            android:parentActivityName=".Activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
@@ -47,7 +48,7 @@
         <activity
             android:name=".Activities.MessagesActivity"
             android:label="@string/label_messages"
-            android:parentActivityName=".Activities.MainActivity" >
+            android:parentActivityName=".Activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
@@ -55,11 +56,16 @@
         <activity
             android:name=".Activities.RequestActivity"
             android:label="@string/title3"
-            android:parentActivityName=".Activities.MainActivity" >
+            android:parentActivityName=".Activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
         </activity>
+        <activity android:name=".Activities.AddWayActivity" />
+        <activity android:name=".Activities.AddServiceActivity" />
+        <activity android:name=".Activities.AddCarActivity" />
+        <activity android:name=".Activities.AddDriverActivity" />
+        <activity android:name=".Activities.AddPaziraeActivity"></activity>
     </application>
 
 </manifest>
