@@ -61,11 +61,40 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
         </activity>
-        <activity android:name=".Activities.AddWayActivity" />
-        <activity android:name=".Activities.AddServiceActivity" />
-        <activity android:name=".Activities.AddCarActivity" />
-        <activity android:name=".Activities.AddDriverActivity" />
-        <activity android:name=".Activities.AddPaziraeActivity"></activity>
+        <activity
+            android:name=".Activities.AddWayActivity"
+            android:parentActivityName=".Activities.ServicesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ServicesActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AddServiceActivity"
+            android:parentActivityName=".Activities.ServicesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ServicesActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AddCarActivity"
+            android:parentActivityName=".Activities.DriversActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.DriversActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AddDriverActivity"
+            android:parentActivityName=".Activities.DriversActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.DriversActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AddPaziraeActivity"
+            android:parentActivityName=".Activities.ServicesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ServicesActivity" />
+        </activity>
     </application>
-
 </manifest>

@@ -10,6 +10,13 @@
         <item name="android:layoutDirection">rtl</item>
         <item name="android:fontFamily">@font/irsans</item>
         <item name="fontFamily">@font/irsans</item>
+        <item name="editTextStyle">@style/GlobalEditText</item>
+    </style>
+
+    <style name="GlobalEditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:gravity">center_horizontal</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -32,6 +39,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/semiblack</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="SubSubTitleTextView">

@@ -1,6 +1,7 @@
 package ir.startup.mebus.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 
 import com.crowdfire.cfalertdialog.CFAlertDialog;
 
+import ir.startup.mebus.Activities.AddPaziraeActivity;
 import ir.startup.mebus.Helpers.Utils;
 import ir.startup.mebus.R;
 
@@ -31,7 +33,7 @@ public class PaziraeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pazirae, container, false);
-
+        view.findViewById(R.id.fab).setOnClickListener(view1 -> startActivity(new Intent(getActivity(), AddPaziraeActivity.class)));
         Utils.setUpRecyclerView(view, getContext(), R.layout.item_pazirae, () -> {
             CFAlertDialog.Builder builder = new CFAlertDialog.Builder(getContext()).setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT);
             ImageView img = new ImageView(getContext());
