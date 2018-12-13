@@ -11,6 +11,8 @@
     <string name="title7">تورها</string>
     <string name="title8">پذیرایی</string>
     <string name="tv_date">۱۳ / مرداد / ۱۳۹۷</string>
+    <string name="title_driver">راننده</string>
+    <string name="title_car">وسایل نقلیه</string>
 
     <string name="btn_logout">خروج از حساب</string>
     <string name="label_messages">پیام ها</string>

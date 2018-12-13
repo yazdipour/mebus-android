@@ -56,42 +56,53 @@
         <activity
             android:name=".Activities.RequestActivity"
             android:label="@string/title3"
-            android:parentActivityName=".Activities.MainActivity">
+            android:parentActivityName=".Activities.MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.MainActivity" />
         </activity>
         <activity
             android:name=".Activities.AddWayActivity"
-            android:parentActivityName=".Activities.ServicesActivity">
+            android:label="@string/title6"
+            android:parentActivityName=".Activities.ServicesActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.ServicesActivity" />
         </activity>
         <activity
             android:name=".Activities.AddServiceActivity"
-            android:parentActivityName=".Activities.ServicesActivity">
+            android:label="@string/title2"
+            android:parentActivityName=".Activities.ServicesActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.ServicesActivity" />
         </activity>
         <activity
             android:name=".Activities.AddCarActivity"
-            android:parentActivityName=".Activities.DriversActivity">
+            android:label="@string/title_car"
+            android:parentActivityName=".Activities.DriversActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.DriversActivity" />
         </activity>
         <activity
             android:name=".Activities.AddDriverActivity"
-            android:parentActivityName=".Activities.DriversActivity">
+            android:label="@string/title_driver"
+            android:parentActivityName=".Activities.DriversActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.DriversActivity" />
         </activity>
         <activity
             android:name=".Activities.AddPaziraeActivity"
-            android:parentActivityName=".Activities.ServicesActivity">
+            android:label="@string/title8"
+            android:parentActivityName=".Activities.ServicesActivity"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.ServicesActivity" />
