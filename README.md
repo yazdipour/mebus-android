@@ -2,10 +2,6 @@
 
 User interface implementing of an Android Application.
 
-* [![Build status](https://build.appcenter.ms/v0.1/apps/50e633a5-9e15-4c78-9fe9-7d3358ff08fa/branches/master/badge)](https://appcenter.ms)
-* [Try it](https://install.appcenter.ms/users/yazdipour/apps/mebus/distribution_groups/public)
-
-
 ## Screenshots
 
 ![0](_screenshots\0.png)
